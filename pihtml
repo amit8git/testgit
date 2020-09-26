@@ -62,7 +62,7 @@
 
      function start() {
        console.log("WebWorker: Starting");
-       worker = new Worker("Example-pi.js");
+       worker = new Worker("workerpi.js");
        worker.addEventListener("message", primeHandler, false);
        var maxNum = $('#upto').val();
        worker.postMessage({'cmd': 'start', 'upto': maxNum});
